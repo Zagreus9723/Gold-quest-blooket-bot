@@ -12,7 +12,7 @@ mon = input('Do you want the bots to get money, y/n: ')
 nm = input('Do you want to use randomly generated names, y/n: ')
 if nm == 'n':
   txtfil = input('Name of text file with names: ')
-  names = [x for x in open(txtfil, 'r').read().splitlines().replace('\n', '')]
+  names = [x.replace('\n', '') for x in open(txtfil, 'r').read().splitlines()]
 
 def run():
   session = requests.Session()
